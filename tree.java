@@ -1,12 +1,17 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("     *    ");
-        System.out.println("    ***   ");
-        System.out.println("   *****  ");
-        System.out.println("    | |   ");
+        String reset = "\u001B[0m";
+        String green = "\u001B[32m";
+        String brown = "\u001B[33m";
+        
+        System.out.println(green + "     *    ");
+        System.out.println("    ***   " + reset); 
+        System.out.println(green + "   *****  " + reset);
+        System.out.println(brown + "    | |   " + reset);
         for (int i = 0; i < 3; i++) {
             System.out.println("MERRY CHRISTMAS!");
         }
     }
 }
+
