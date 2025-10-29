@@ -5,9 +5,8 @@ public class Main {
         System.out.println("    ***   ");
         System.out.println("   *****  ");
         System.out.println("    | |   ");
-        while (true) {
+        for (int i = 0; i < 3; i++) {
             System.out.println("MERRY CHRISTMAS!");
         }
-        
     }
 }
