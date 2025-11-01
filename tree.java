@@ -1,28 +1,37 @@
 public class Main {
     public static void main(String[] args) {
+        ChristmasTree tree = new ChristmasTree(5);
+        tree.display();
 
-        String reset = "\u001B[0m";
-        String green = "\u001B[32m";
-        String brown = "\u001B[33m";
-        String red = "\u001B[31m";
-        String yellow = "\u001B[93m";
-        String blue = "\u001B[34m";
-        
-        System.out.println(yellow + "     *    " + reset);
-        System.out.println(green + "     *    " + reset);
-        System.out.println(green + "    ***   " + reset);
-        System.out.println(green + "   *" + red + "°" + green + "*" + blue + "°" + green + "*  " + reset);
-
-        char box = '▣'; 
-
-        System.out.print(red + box + box + " " + reset);
-        System.out.print(brown + "| |" + reset);
-        System.out.print(blue + box  + reset);
-        System.out.println();
-
-        for (int i = 0; i < 3; i++) {
-            System.out.println("MERRY CHRISTMAS!");
-        }
-        
     }
 }
+class ChristmasTree {
+    private int size;
+
+    public ChristmasTree(int size) {
+        this.size = size;
+    }
+
+    public void display() {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int j = 0; j < size - 1; j++) {
+            System.out.print(" ");
+        }
+        System.out.println("|");
+    }
+
+    public void setSize(int newSize) {
+        this.size = newSize;
+    }
+}
+
+
